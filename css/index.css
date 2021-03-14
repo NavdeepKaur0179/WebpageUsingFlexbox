@@ -1,0 +1,203 @@
+body {
+    margin: 0;
+}
+
+p {
+    text-align: justify;
+}
+
+
+/* Navigation bar for large Screens*/
+
+.navigation {
+    background-color: orange;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    list-style: none;
+    margin: 0px;
+    font-weight: bold;
+}
+
+.navigation a {
+    text-decoration: none;
+    display: block;
+    padding: 1em;
+}
+
+.navigation a:hover {
+    background-color: orangered;
+    color: white;
+}
+
+
+/* Navigation bar for medium Screens */
+
+@media all and (max-width:800px) {
+    .navigation {
+        justify-content: space-around;
+        padding: 0;
+    }
+}
+
+
+/*  Navigation bar for Small Screens*/
+
+@media all and (max-width: 600px) {
+    .navigation {
+        flex-flow: column wrap;
+    }
+    .navigation a {
+        padding: 10px;
+        text-align: center;
+        border-top: 1px solid rgb(81, 114, 158);
+        border-bottom: 1px solid rgb(81, 114, 158);
+    }
+    .navigation li:last-of-type a {
+        border-bottom: none;
+    }
+    ;
+}
+
+
+/*main wrapper -containing all parts header/footer/asides/main*/
+
+.wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.wrapper>* {
+    padding: 10px;
+    flex: 1 100%;
+}
+
+
+/*Header*/
+
+.header {
+    background-color: rgb(192, 104, 22);
+    color: whitesmoke;
+    text-align: center;
+}
+
+
+/*Footer*/
+
+.footer {
+    background-color: rgb(192, 104, 22);
+    color: whitesmoke;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+
+/* Main text portion*/
+
+.main {
+    background-color: rgb(250, 179, 48);
+}
+
+
+/*Left Sidebar*/
+
+.aside-1 {
+    background-color: rgb(226, 67, 19);
+}
+
+
+/*Right Sidebar*/
+
+.aside-2 {
+    background-color: rgb(226, 67, 19);
+}
+
+
+/* For div surrounding  Golden Temple image*/
+
+.image {
+    background-color: rgb(250, 179, 48);
+    display: flex;
+    justify-content: center;
+}
+
+
+/* For div surrounding  Golden Temple image and Text Description*/
+
+.image-text {
+    background-color: rgb(250, 179, 48);
+}
+
+
+/* For Golden Temple image */
+
+.img-gt {
+    align-self: center;
+    max-width: 50%;
+}
+
+
+/* For Advertisement in right sidebar*/
+
+.img-advert {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+
+/*For small screens */
+
+@media all and (min-width: 600px) {
+    .aside {
+        flex: 1 0 0;
+    }
+}
+
+
+/* For large Screens order of different elemants */
+
+@media all and (min-width: 800px) {
+    .image-text {
+        flex: 3 0px;
+    }
+    .aside-1 {
+        order: 1;
+    }
+    .image-text {
+        order: 2;
+    }
+    .aside-2 {
+        order: 3;
+    }
+    .footer {
+        order: 4;
+    }
+}
+
+
+/*aside 1 navigation*/
+
+.aside-1-nav {
+    background-color: orange;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    justify-content: space-around;
+    padding: 1em;
+    font-weight: bold;
+}
+
+.aside-1-nav a {
+    text-decoration: none;
+    display: block;
+    padding: 1em;
+    padding: 10px;
+    text-align: center;
+}
+
+.aside-1-nav a:hover {
+    background-color: orangered;
+    color: white;
+}
